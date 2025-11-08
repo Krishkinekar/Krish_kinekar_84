@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-one{ 
+            width: 80%;
+            height: 80%;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;     
+            flex-direction: column;   
+            align-items: center;
+            box-shadow: 2px 1px  2px 3px rgb(182, 182, 182);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+        .one{
+            width:100%;
+            height: 90%;
+            background-color: brown;
+           
+        }
+        .two{
+            width:100%; 
+            height: 10%;
+            background-color: rgb(195, 195, 195);
+            margin-top: 4%;
+        }
+        button{
+            width: 20%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container-one">
+            <div class="one">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS8a8_iQJDoZj0ED0kkdhANK6OziMll_VKWDr1d6pp3D4SOHpe6" id="img">
+            </div>
+            <div class="two">
+                <button onclick="krish()"></button>
+                <button onclick="krishR()"></button>
+                <button onclick="krishRk()"></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function krish ( ){
+    document.getElementById("img").src="https://m.media-amazon.com/images/I/51bcLvcxR0L.jpg"
+    }
+    function krishR ( ){
+    document.getElementById("img").src="https://img.tatacliq.com/images/i8/1348Wx2000H/MP000000012222280_1348Wx2000H_202202201846191.jpeg"
+    }
+    function krishRk ( ){
+    document.getElementById("img").src=""
+    }
+</script>
+</html>
