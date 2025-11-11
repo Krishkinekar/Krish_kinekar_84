@@ -19,32 +19,31 @@
             align-items: center;
         }
         .container-one{ 
-            width: 60%;
-            height: 90%;
+            width: 80%;
+            height: 80%;
             background-color: lightgray;
             display: flex;
             justify-content: center;     
             flex-direction: column;   
             align-items: center;
-            box-shadow: 2px 1px  2px 3px rgb(227, 227, 224);
+            box-shadow: 2px 1px  2px 3px gold;
         }
         img{
             width: 100%;
             height: 100%;
-            object-fit:fill;
+            object-fit:cover;
         }
         .one{
             width:100%;
-            height: 100%;
+            height: 90%;
             background-color: brown;
            
         }
         .two{
             width:100%; 
-            height: 20%;
+            height: 10%;
             background-color: rgb(195, 195, 195);
-            box-shadow: 2px 1px  2px 3px rgb(227, 227, 224);
-   
+            margin-top: 4%;
         }
         button{
             width: 20%;
@@ -56,25 +55,25 @@
     <div class="main-container">
         <div class="container-one">
             <div class="one">
-                <img src="https://m.media-amazon.com/images/I/61eHm2MCzKL.jpg" id="img" >
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS8a8_iQJDoZj0ED0kkdhANK6OziMll_VKWDr1d6pp3D4SOHpe6" id="img">
             </div>
             <div class="two">
-                <button onclick="krish()">red bulb </button>
-                <button onclick="krishR()">green bulb</button>
-                <button onclick="krishRk()">pink bulb</button>
+                <button onclick="krish()"></button>
+                <button onclick="krishR()"></button>
+                <button onclick="krishRk()"></button>
             </div>
         </div>
     </div>
 </body>
 <script>
     function krish ( ){
-    document.getElementById("img").src="https://m.media-amazon.com/images/I/61WK3SUynEL.jpg "
+    document.getElementById("img").src="https://m.media-amazon.com/images/I/51bcLvcxR0L.jpg"
     }
     function krishR ( ){
-    document.getElementById("img").src="https://m.media-amazon.com/images/I/613lWiTCRLL.jpg"
+    document.getElementById("img").src="https://img.tatacliq.com/images/i8/1348Wx2000H/MP000000012222280_1348Wx2000H_202202201846191.jpeg"
     }
     function krishRk ( ){
-    document.getElementById("img").src="https://m.media-amazon.com/images/I/611A4eTJu2L.jpg"
+    document.getElementById("img").src=""
     }
 </script>
 </html>
