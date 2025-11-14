@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container-two{
+            width: 50%;
+            height: 90%;
+            background-color: rgb(255, 62, 62);
+        }
+        .display{
+            width: 100%;
+            height: 20%;
+            background-color: wheat;
+        }
+        .input{
+            width: 100%;
+            height: 20%;
+          color: white;
+        }
+        .input-two{
+            width: 100%;
+            height: 20%;
+            color: rgb(255, 255, 255);
+ 
+        }
+        .button{
+            width: 100%;
+            height: 20%;
+            color: white;
+            margin-top: 20%;
+        }
+        input{
+            width: 99%;
+            height: 70%;
+        }
+        button{
+            width: 100%;
+            height: 20%;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container-two">
+            <div class="display" id="display"></div>
+            <div class="input" id="input-one">
+            <h2 style="text-align: center;"> Enter number one</h2>
+            <input type="number"  id="input-two">
+            </div>
+            <div class="input-two">
+                <h2 style="text-align: center;">Enter number two</h2>
+                <input type="number">
+            </div>
+            <div class="button">
+                <button onclick="addition ()">addition</button>
+                <br>
+                <button>subtraction</button>
+                <br>
+                <button>multiplaction</button>
+                <br>
+                <button>division</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function addition (){
+        let a = document.getElementById("input-one").value
+        let b = document.getElementById("input-two").value
+        let c = Number (a) + Number (b) 
+        document.getElementById("display").innerHTML = display
+    }
+</script>
+</html>
