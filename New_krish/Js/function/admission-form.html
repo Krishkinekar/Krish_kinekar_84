@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission </title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(https://png.pngtree.com/background/20250102/original/pngtree-vivid-abstract-texture-a-burst-of-colorful-background-picture-image_15292555.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: row;
+        }
+
+        .main-container {
+            width: 50%;
+            height: 100%;
+            background-color:transparent;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+       <div class="form">
+            <fieldset>
+                <legend>Admission form</legend>
+                <label> Name</label>
+                <input type="text" id="name" required>
+                <br><br>
+                <label> Age</label>
+                <input type="number" id="Age" required>
+                <br><br>
+                <label>Class</label>
+                <input type="number" id="Class" required>
+                <br><br>
+                <label>Mob.No</label>
+                <input type="number" id="Mob.no" required>
+                <br><br>
+                <label>Date of birth</label>
+                <input type="date" id="Dob" required >
+                <br><br>
+                <label>Address</label>
+                <textarea></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Submit</legend>
+                <button onclick="button ()">Submit</button>
+            </fieldset>
+            </div>
+        
+       <div class="card">
+        <p id="one"></p>
+        <p id="two"></p>
+        <p id="three"></p>
+        <p id="four"></p>
+        <p id="five"></p>
+       </div>
+
+
+    </div>
+</body>
+<script>
+     function button () {
+        let x = document.getElementById("name").value;
+        document.getElementById("one").innerHTML = "Name : " + x
+    
+    
+
+       let y = document.getElementById("Age").value;
+       document.getElementById("two").innerHTML = "age : " + y
+    
+
+        let z = document.getElementById("Class").value;
+       document.getElementById("three").innerHTML = "class : " + z
+    
+
+
+       let c = document.getElementById("Mob.no").value;
+       document.getElementById("four").innerHTML = "mobile number : " + c
+    
+
+        let l = document.getElementById("Dob").value;
+       document.getElementById("five").innerHTML = "date of number : " + l
+}
+
+</script>
+
+</html>
