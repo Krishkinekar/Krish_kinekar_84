@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            width: 100%;
+            height: 10%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            position: fixed;
+        }
+
+        .header-one {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 3%;
+
+        }
+
+        .header-two {
+            width: 40%;
+            height: 60%;
+            border-radius: 90px;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .header-three {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 14%;
+            justify-content: space-evenly;
+            text-align: end;
+        }
+
+        /* about-section */
+        .about {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .about-section-one {
+            width: 70%;
+            height: 100%;
+            background-color: #c4d42b;
+        }
+
+        .about-section-two {
+            width: 30%;
+            height: 100%;
+        }
+
+        .about-one {
+            width: 50%;
+            height: 37.70%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Interview-section */
+        .interview-section {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .interview-section-one {
+            width: 100%;
+            height: 10%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+        }
+
+        .s-hr {
+            width: 85%;
+            height: 1px;
+            margin-top: 2%;
+
+        }
+
+        .interview-cards {
+            width: 100%;
+            height: 50%;
+            justify-content: space-evenly;
+            display: flex;
+        }
+
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            width: 240px;
+            height: 600px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            margin-top: 5px;
+
+        }
+
+        .card:hover {
+            margin-top: 5px;
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 60%;
+
+        }
+
+        .interview-img {
+            width: 100%;
+            height: 80%;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .interview-img-one {
+            background-image: url(https://spaces.is/media/pages/loversmagazine/79b0b07b3e-1723031519/scout-796x995-crop-q90.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: end;
+            margin-left: 3%;
+        }
+
+        .interview-img-two {
+            background-image: url(https://spaces.is/media/pages/loversmagazine/8e1caa771f-1723031652/culture-ad-796x995-crop-q90.webp );
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            text-align: center;
+            display: flex;
+            align-items: end;
+
+        }
+
+        .interview-img-three {
+            background-image: url(https://spaces.is/media/pages/loversmagazine/3a15143e02-1723031724/studios-ad-796x995-crop-q90.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            text-align: center;
+            display: flex;
+            align-items: end;
+            margin-right: 3%;
+        }
+
+        .i-g-one {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            font-size: 25px;
+        }
+
+        /* Product desigine */
+        .product-design {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .product-design-one {
+            width: 100%;
+            height: 20%;
+
+        }
+
+        .product-design-two {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .p-d-one {
+            width: 40%;
+            height: 120vh;
+            display: flex;
+            margin-left: 3%;
+        }
+
+        .p-1 {
+            width: 70%;
+            height: 100%;
+            background-color: #9C7334;
+        }
+
+        .p-1-text {
+            width: 95%;
+            height: 99.20%;
+            background-color: #9C7334;
+            text-align: center;
+        }
+
+        .p-1-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .p-2 {
+            width: 48%;
+            height: 100%;
+        }
+
+        .p-d-two {
+            width: 40%;
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .p-d-1 {
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+        }
+
+        .p-d-2 {
+            width: 100%;
+            height: 60%;
+            display: flex;
+        }
+
+        .p-p-1 {
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .p-p-2 {
+            width: 50%;
+            height: 100%;
+            margin-right: 5%;
+        }
+
+        .p-p-3 {
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .p-p-4 {
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .p-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 240px;
+            height: 500px;
+            margin-top: 5px;
+
+        }
+
+        .p-card img {
+            width: 100%;
+            height: 40%;
+
+        }
+
+        /* table section */
+
+        .table-section {
+            width: 100%;
+            height: 100%;
+            margin-top: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .table-main {
+            width: 95%;
+            height: 90%;
+
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header-section -->
+    <div class="main-container">
+        <div class="header">
+            <div class="header-one">
+                <div class="header-two">
+                    <h3 style="color: white; ">𝓛𝓸𝓿𝓮𝓻𝓼 𝓜𝓪𝓰𝓪𝔃𝓲𝓷𝓮 <span style="margin-bottom: 3px;">⌄</span></h3>
+                </div>
+            </div>
+            <div class="header-three">
+                <h3>Home</h3>
+                <h3>Interviews</h3>
+                <h3>Mixes</h3>
+                <h3>🔎</h3>
+            </div>
+        </div>
+        <!-- about-section -->
+        <div class="about">
+            <div class="about-section-one">
+                <h1 style="font-size: 130px;">𝙇𝙚𝙚𝙣𝙖 <br><span style="margin-left: 10%;"> 𝙈𝙪𝙧𝙙𝙚𝙨𝙝𝙬𝙖𝙧
+                    </span> </h1>
+                <div class="about-one">
+                    <div>
+                        <h2 style="font-size: 25px; margin-left: 2%;">𝖫𝖾𝖾𝗇𝖺 𝗂𝗌 𝖺 𝖭𝖾𝗐 𝖸𝗈𝗋𝗄–𝖻𝖺𝗌𝖾𝖽
+                            𝗏𝗂𝗌𝗎𝖺𝗅 <br>𝖽𝖾𝗌𝗂𝗀𝗇𝖾𝗋 𝖺𝗇𝖽 𝗌𝗍𝗈𝗋𝗒𝗍𝖾𝗅𝗅𝖾𝗋, 𝗐𝖾𝖺𝗏𝗂𝗇𝗀 <br>𝖻𝗈𝗅𝖽
+                            𝖼𝗎𝗅𝗍𝗎𝗋𝖺𝗅 𝗋𝗈𝗈𝗍𝗌, 𝗍𝗁𝗈𝗎𝗀𝗁𝗍𝖿𝗎𝗅 <br>𝗌𝗍𝗋𝖺𝗍𝖾𝗀𝗒, 𝖺𝗇𝖽
+                            𝖾𝗏𝖾𝗋𝗒𝖽𝖺𝗒 𝗉𝗅𝖺𝗒 𝗂𝗇𝗍𝗈 𝗁𝖾𝗋 𝗐𝗈𝗋𝗄. <br><br> 𝖭𝗈. 610 ------------𝖱𝖾𝖺𝖽
+                            𝖨𝗇𝗍𝖾𝗋𝗏𝗂𝖾𝗐</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="about-section-two">
+                <img style="margin-top: 10%;"
+                    src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/89fbde5cd6-1750048777/mgp_4261-860x1204-crop-q85.webp"
+                    height="94.70%" width="100%">
+
+
+            </div>
+
+        </div>
+        <br><br><br><br><br>
+        <!-- Interview-section -->
+        <div class="interview-section">
+            <div class="interview-section-one">
+                <div>
+                    <h2 style="margin-left: 4%;">Recent Interviews &nbsp;</h2>
+                </div>
+
+                <div class="s-hr">
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="interview-cards">
+                <div class="card">
+                    <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/brennan-mcgrath/8a82b0dd01-1751989842/combo-headshots_0618250275-1-366x549-crop-q90.webp" />
+                    <h3>𝘍𝘰𝘶𝘯𝘥𝘦𝘳 <br>
+                        <b>Brennan McGrath — Combo</b>
+                        𝘉𝘳𝘦𝘯𝘯𝘢𝘯 𝘔𝘤𝘎𝘳𝘢𝘵𝘩 𝘪𝘴 𝘢 𝘗𝘢𝘳𝘵𝘯𝘦𝘳 𝘢𝘵 𝘊𝘰𝘮𝘣𝘰, 𝘢𝘯
+                        𝘪𝘯𝘥𝘦𝘱𝘦𝘯𝘥𝘦𝘯𝘵 𝘴𝘵𝘳𝘢𝘵𝘦𝘨𝘺, 𝘥𝘦𝘴𝘪𝘨𝘯, 𝘢𝘯𝘥 𝘤𝘳𝘦𝘢𝘵𝘪𝘷𝘦 𝘰𝘧𝘧𝘪𝘤𝘦 𝘪𝘯
+                        𝘕𝘦𝘸 𝘠𝘰𝘳𝘬 𝘊𝘪𝘵𝘺.
+                    </h3>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/julian-herbst/827399e440-1754692532/me_full-366x549-crop-q90.webp" />
+                    <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 <br>
+                        Julian Herbst — Attio <br> 𝘑𝘶𝘭𝘪𝘢𝘯 𝘏𝘦𝘳𝘣𝘴𝘵 𝘪𝘴 𝘢 𝘎𝘦𝘳𝘮𝘢𝘯 𝘱𝘳𝘰𝘥𝘶𝘤𝘵
+                        𝘥𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘤𝘳𝘦𝘢𝘵𝘪𝘯𝘨 𝘥𝘪𝘨𝘪𝘵𝘢𝘭 𝘦𝘹𝘱𝘦𝘳𝘪𝘦𝘯𝘤𝘦𝘴 𝘢𝘯𝘥 𝘣𝘳𝘢𝘯𝘥
+                        𝘪𝘥𝘦𝘯𝘵𝘪𝘵𝘪𝘦𝘴 𝘧𝘰𝘳 𝘴𝘵𝘢𝘳𝘵𝘶𝘱𝘴 𝘢𝘯𝘥 𝘸𝘪𝘥𝘦 …
+                </div>
+                <div class="card">
+                    <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/alex-khomutov/a90f10c547-1749600107/img_3240-366x549-crop-q90.webp" />
+                    <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳<br> Alex Khomutov he/him — Ford Motor Company 𝘈𝘭𝘦𝘹
+                        𝘒𝘩𝘰𝘮𝘶𝘵𝘰𝘷 𝘪𝘴 𝘢 𝘜𝘬𝘳𝘢𝘪𝘯𝘪𝘢𝘯 𝘋𝘪𝘨𝘪𝘵𝘢𝘭 𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳
+                        𝘤𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘭𝘪𝘷𝘪𝘯𝘨 𝘪𝘯 𝘓𝘰𝘴 𝘈𝘯𝘨𝘦𝘭𝘦𝘴 𝘢𝘯𝘥 𝘥𝘦𝘴𝘪𝘨𝘯𝘪𝘯𝘨 𝘵𝘩𝘦
+                        𝘧𝘶𝘵𝘶𝘳𝘦 𝘰𝘧 …</h3>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/rauno-freiberg/c2daab0494-1751662321/rauno2-366x549-crop-48-6-39-2-q90.webp" />
+                    <h3>
+                        𝘋𝘦𝘴𝘪𝘨𝘯 𝘌𝘯𝘨𝘪𝘯𝘦𝘦𝘳 <br> Rauno Freiberg — Vercel 𝘙𝘢𝘶𝘯𝘰 𝘍𝘳𝘦𝘪𝘣𝘦𝘳𝘨 𝘪𝘴 𝘢𝘯
+                        𝘌𝘴𝘵𝘰𝘯𝘪𝘢𝘯 𝘪𝘯𝘵𝘦𝘳𝘢𝘤𝘵𝘪𝘰𝘯 𝘥𝘦𝘴𝘪𝘨𝘯𝘦𝘳. 𝘏𝘦 𝘤𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘸𝘰𝘳𝘬𝘴
+                        𝘢𝘴 𝘢 𝘚𝘵𝘢𝘧𝘧 𝘋𝘦𝘴𝘪𝘨𝘯 𝘌𝘯𝘨𝘪𝘯𝘦𝘦𝘳 𝘢𝘵 𝘝𝘦𝘳𝘤𝘦𝘭 𝘢𝘯𝘥 𝘸𝘢𝘴 …</h3>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/amelie-schluter/bd528b6d74-1751632298/2025-amelie-profile-closeup_v2-366x549-crop-q90.webp" />
+                    <h3>𝘍𝘰𝘶𝘯𝘥𝘦𝘳 <br> Amelie Schlüter — SPACING 𝘊𝘰-𝘍𝘰𝘶𝘯𝘥𝘦𝘳 𝘰𝘧 𝘚𝘗𝘈𝘊𝘐𝘕𝘎 – 𝘢
+                        𝘥𝘦𝘴𝘪𝘨𝘯 𝘷𝘦𝘯𝘵𝘶𝘳𝘦 𝘴𝘵𝘶𝘥𝘪𝘰 𝘤𝘳𝘦𝘢𝘵𝘪𝘯𝘨 𝘢 𝘧𝘢𝘮𝘪𝘭𝘺 𝘰𝘧
+                        𝘥𝘦𝘭𝘪𝘨𝘩𝘵𝘧𝘶𝘭 𝘈𝘐 𝘴𝘰𝘧𝘵𝘸𝘢𝘳𝘦 𝘱𝘳𝘰𝘥𝘶𝘤𝘵𝘴 𝘢𝘯𝘥 𝘱𝘢𝘳𝘵𝘯𝘦𝘳𝘪𝘯𝘨 …</h3>
+                </div>
+            </div>
+        </div>
+        <div class="interview-img">
+            <div class="i-g-one">
+                <div class="interview-img-one">
+                    <div>
+                        <h1>𝘚𝘤𝘰𝘶𝘵</h1>
+                        <p style="margin-left:1%;"> 𝘊𝘰𝘯𝘯𝘦𝘤𝘵𝘪𝘯𝘨 𝘦𝘹𝘤𝘦𝘱𝘵𝘪𝘰𝘯𝘢𝘭 𝘤𝘰𝘮𝘱𝘢𝘯𝘪𝘦𝘴
+                            𝘸𝘪𝘵𝘩 𝘦𝘹𝘤𝘦𝘱𝘵𝘪𝘰𝘯𝘢𝘭 𝘵𝘢𝘭𝘦𝘯𝘵.</p>
+                    </div>
+                </div>
+                <div class="interview-img-two">
+                    <div>
+                        <h1>𝘊𝘶𝘭𝘵𝘶𝘳𝘦</h1>
+                        <p style="margin-left: 4%;"> 𝘛𝘩𝘦 𝘎𝘭𝘢𝘴𝘴𝘥𝘰𝘰𝘳 𝘢𝘭𝘵𝘦𝘳𝘯𝘢𝘵𝘪𝘷𝘦. 𝘈
+                            𝘱𝘭𝘢𝘵𝘧𝘰𝘳𝘮 𝘵𝘩𝘢𝘵 𝘴𝘩𝘰𝘸𝘤𝘢𝘴𝘦𝘴 𝘵𝘩𝘦 𝘣𝘦𝘴𝘵 𝘤𝘰𝘮𝘱𝘢𝘯𝘪𝘦𝘴.</p>
+                    </div>
+                </div>
+                <div class="interview-img-three">
+                    <div>
+                        <h1>𝘚𝘵𝘶𝘥𝘪𝘰𝘴 </h1>
+                        <p style="margin-left: 4%;">𝘉𝘳𝘰𝘸𝘴𝘦 𝘢𝘯𝘥 𝘩𝘪𝘳𝘦 𝘵𝘩𝘦 𝘱𝘦𝘳𝘧𝘦𝘤𝘵 𝘥𝘦𝘴𝘪𝘨𝘯
+                            𝘴𝘵𝘶𝘥𝘪𝘰 𝘧𝘰𝘳 𝘺𝘰𝘶𝘳 𝘯𝘦𝘹𝘵 𝘱𝘳𝘰𝘫𝘦𝘤𝘵.</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <!-- Product design -->
+            <div class="interview-section-one">
+                <div>
+                    <h2 style="margin-left: 4%;">Product Designers
+                        &nbsp;</h2>
+                </div>
+
+                <div class="s-hr">
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="product-design-two">
+                <div class="p-d-one">
+                    <div class="p-1">
+                        <div class="p-1-text">
+                            <P style=" text-align: center ; margin-top: 2%;"> <span style="font-size: 130px;">𝚁𝚢𝚊𝚗
+                                    <br> 𝙵𝚊𝚗</span><br>
+                                𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘢𝘵 𝘊𝘰𝘥𝘦 𝘢𝘯𝘥 <br> 𝘛𝘩𝘦𝘰𝘳𝘺 <br>
+                                <center><img src="https://www.pngall.com/wp-content/uploads/5/Vertical-Line.png">
+                                </center>
+                                𝘙𝘺𝘢𝘯 𝘍𝘢𝘯𝘪𝘴 𝘢 𝘕𝘦𝘸 𝘠𝘰𝘳𝘬-𝘣𝘢𝘴𝘦𝘥 𝘱𝘳𝘰𝘥𝘶𝘤𝘵 𝘥𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘢𝘯𝘥
+                                𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 𝘩𝘦𝘭𝘱𝘪𝘯𝘨 𝘩𝘶𝘮𝘢𝘯𝘴 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘢𝘯𝘥 𝘮𝘢𝘤𝘩𝘪𝘯𝘦𝘴
+                                𝘣𝘦𝘵𝘵𝘦𝘳. 𝘏𝘦 𝘤𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘥𝘦𝘴𝘪𝘨𝘯𝘴 𝘢𝘵 𝘊𝘰𝘥𝘦 𝘢𝘯𝘥 𝘛𝘩𝘦𝘰𝘳𝘺,
+                                𝘢𝘯𝘥 𝘴𝘶𝘱𝘱𝘰𝘳𝘵𝘴 𝘵𝘩𝘦 𝘥𝘦𝘴𝘪𝘨𝘯 𝘤𝘰𝘮𝘮𝘶𝘯𝘪𝘵𝘺 𝘢𝘴 𝘢𝘯
+                                𝘈𝘸𝘸𝘸𝘢𝘳𝘥𝘴 𝘫𝘶𝘳𝘺 𝘢𝘯𝘥 𝘈𝘐𝘎𝘈 𝘕𝘠 𝘮𝘦𝘯𝘵𝘰𝘳.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="p-1-img">
+                            <img src="https://spaces.is/media/pages/loversmagazine/interviews/ryan-fan/de4e2c0830-1741470772/headshot-4x5-764x1528-crop-q90.webp"
+                                height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-d-two">
+
+                    <div class="p-d-1">
+                        <div class="p-p-1">
+                            <div class="p-card">
+                                <img
+                                    src="https://spaces.is/media/pages/loversmagazine/interviews/ethan-chng/07e033d0d2-1745259721/portrait_main-366x366-crop-q90.webp" />
+                                <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 <br>
+                                    𝙀𝙩𝙝𝙖𝙣 𝘾𝙝𝙣𝙜 — 𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢 𝘌𝘵𝘩𝘢𝘯 𝘊𝘩𝘯𝘨 𝘪𝘴 𝘢
+                                    𝘥𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘢𝘵 𝘐𝘯𝘴𝘵𝘢𝘨𝘳𝘢𝘮 𝘧𝘰𝘤𝘶𝘴𝘦𝘥 𝘰𝘯 𝘴𝘺𝘴𝘵𝘦𝘮𝘴 𝘢𝘯𝘥
+                                    𝘪𝘯𝘵𝘦𝘳𝘢𝘤𝘵𝘪𝘰𝘯𝘴. 𝘏𝘦 𝘦𝘯𝘫𝘰𝘺𝘴 𝘥𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘶𝘱 𝘪𝘥𝘦𝘢𝘴
+                                    𝘵𝘩𝘢𝘵 𝘴𝘰𝘭𝘷𝘦 …
+                            </div>
+                        </div>
+                        <div class="p-p-2">
+                            <div class="p-card">
+                                <img
+                                    src="https://spaces.is/media/pages/loversmagazine/interviews/andrea-pacheco/229c4fbb03-1746055185/dedeialn-366x366-crop-q90.webp" />
+                                <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 <br>
+                                    𝑨𝒏𝒅𝒓𝒆𝒂 𝑷𝒂𝒄𝒉𝒆𝒄𝒐 𝑺𝒉𝒆/𝑯𝒆𝒓(𝒔) — 𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎 𝘗𝘢𝘤𝘩𝘦𝘤𝘰
+                                    𝘪𝘴 𝘢 𝘱𝘳𝘰𝘥𝘶𝘤𝘵 𝘥𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘱𝘢𝘴𝘴𝘪𝘰𝘯𝘢𝘵𝘦 𝘢𝘣𝘰𝘶𝘵
+                                    𝘣𝘶𝘪𝘭𝘥𝘪𝘯𝘨 𝘵𝘩𝘦 𝘧𝘶𝘵𝘶𝘳𝘦 𝘰𝘧 𝘴𝘰𝘤𝘪𝘢𝘭 𝘤𝘰𝘯𝘯𝘦𝘤𝘵𝘪𝘰𝘯.
+                                    𝘞𝘪𝘵𝘩 𝘢 𝘣𝘢𝘤𝘬𝘨𝘳𝘰𝘶𝘯𝘥 𝘪𝘯 …
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-d-2">
+                        <div class="p-p-3">
+                            <div class="p-card">
+                                <img
+                                    src="https://spaces.is/media/pages/loversmagazine/interviews/andrey-rybin/30d46e50c3-1743313008/img_9639-kopija-366x366-crop-42-2-17-5-q90.webp" />
+                                <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 <br>
+                                    𝑨𝒏𝒅𝒓𝒆𝒚 𝑹𝒚𝒃𝒊𝒏 — 𝑯𝒖𝒎𝒂𝒏 𝘈𝘯𝘥𝘳𝘦𝘪 𝘙𝘺𝘣𝘪𝘯 𝘪𝘴 𝘢 𝘗𝘳𝘰𝘥𝘶𝘤𝘵
+                                    𝘢𝘯𝘥 𝘐𝘯𝘥𝘶𝘴𝘵𝘳𝘪𝘢𝘭 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳, 𝘣𝘰𝘳𝘯 𝘪𝘯 𝘓𝘪𝘱𝘦𝘵𝘴𝘬 𝘢𝘯𝘥
+                                    𝘣𝘢𝘴𝘦𝘥 𝘪𝘯 𝘠𝘦𝘳𝘦𝘷𝘢𝘯, 𝘸𝘪𝘵𝘩 𝘢 𝘧𝘰𝘤𝘶𝘴 𝘰𝘯 𝘮𝘪𝘯𝘪𝘮𝘢𝘭𝘪𝘴𝘮
+                                    𝘢𝘯𝘥 …
+                            </div>
+                        </div>
+                        <div class="p-p-4">
+                            <div class="p-card">
+                                <img
+                                    src="https://spaces.is/media/pages/loversmagazine/interviews/barbara-lopez/7a3e970d3e-1743785370/barbara-366x366-crop-q90.webp" />
+                                <h3>𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 <br>
+                                    𝑩𝒂𝒓𝒃𝒂𝒓𝒂 𝑳𝒐𝒑𝒆𝒛 𝑺𝒉𝒆 / 𝑯𝒆𝒓 — 𝑺𝒒𝒖𝒂𝒓𝒆𝒔𝒑𝒂𝒄𝒆 𝘉𝘢𝘳𝘣𝘢𝘳𝘢
+                                    𝘪𝘴 𝘢 𝘝𝘦𝘯𝘦𝘻𝘶𝘦𝘭𝘢𝘯 𝘗𝘳𝘰𝘥𝘶𝘤𝘵 𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘳 𝘣𝘢𝘴𝘦𝘥 𝘪𝘯 𝘕𝘦𝘸
+                                    𝘠𝘰𝘳𝘬, 𝘤𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘸𝘰𝘳𝘬𝘪𝘯𝘨 𝘰𝘯 𝘵𝘩𝘦 𝘍𝘳𝘰𝘯𝘵𝘴𝘪𝘵𝘦 𝘵𝘦𝘢𝘮
+                                    𝘢𝘵 𝘚𝘲𝘶𝘢𝘳𝘦𝘴𝘱𝘢𝘤𝘦.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table section -->
+            <div class="table-section">
+                <table border="2px" style=" height: 100%; width: 90%; ">
+
+
+                    <!-- Row two -->
+                    <tr>
+                        <th rowspan="2" style="width: 300px; font-size: 50px; margin-bottom: 10%;"> Mixes put <br>
+                            together <br> by your favourite designers.</th>
+                        <th>
+                            <img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="250px">
+                        </th>
+                        <th><img src="https://spaces.is/media/pages/loversmagazine/interviews/brennan-mcgrath/6a5a7d204e-1754768360/603.brennan-mcgrath-350x350-crop-q90.webp"
+                                height="260px" width="220px" ></th>
+                        <th><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px"></th>
+                        <th><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px"></th>
+
+                    </tr>
+                    <!-- Row three -->
+                    <tr>
+
+                        <td><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px" style="margin-left: 5%;" ></td>
+                        <td><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px" style="margin-left: 3%;" ></td>
+                        <td><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px" style="margin-left: 2%;" ></td>
+                        <td><img src="https://spaces.is/media/pages/loversmagazine/interviews/leena-murdeshwar/5041415605-1756421076/604.leena-murdeshwar-350x350-crop-q90.webp"
+                                height="260px" width="220px" style="margin-left: 2%;" ></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(255, 234, 0);
+    display: flex;
+}
+.logo{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(242, 255, 0);
+    font-size: 40px;
+    font-weight: 700;
+    color: tomato;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.links{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 247, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+span{
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+}
+/* navagation section start */
+nav{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 47, 0, 0.867);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    height: 65%;
+
+}
+article{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.box-one{
+    width: 40%;
+    height: 80%;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+}
+.box-two{
+    width: 40%;
+    height: 80%;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+}
+section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card{
+    width: 20%;
+    height: 80%;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+}
+footer{
+    width: 100%;
+    height: 15%;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+/* mobile screen */
+@media  (max-width:480px) {
+    article{
+        flex-direction: column;
+    }
+   
+   span{
+    font-size: 20px;
+   }
+.box-one{
+    width: 80%;
+    height: 40%;
+}
+.box-two{
+    width: 80%;
+    height: 40%;
+}
+.card{
+    width: 80%;
+    height: 20%;
+}
+section{
+    flex-direction: column;
+}
+}
+/* tablet screen */
+@media ( min-width:786px) and (max-width:1024px) {
+    span{
+    font-size: 25px;
+
+    }
+    .card{
+        width: 80%;
+        height: 20%;
+        
+    }
+   }
