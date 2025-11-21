@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            background-color: #FF5555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 40%;
+            height: 80%;
+            background-color: #ffffff;
+        }
+        .body{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer {
+            width: 100%;
+            height: 10%;
+        }
+        input{
+            width: 30vw;
+            height: 4vh;
+        }
+            button{
+            width: 90%;
+            height: 4vh;
+            margin-top: 10%;
+            margin-left: 4.5%;
+            background-color: #FF0000;
+        } 
+        .card{
+            display: flex;
+            justify-content:center; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="header">
+                <h1 style="text-align: center;">Average calculator</h1>
+            </div>
+            <div class="body">
+                <label>first number:</label>
+                <div><input type="number" id="inp-1"></div>
+
+                <label>second number:</label>
+               <div> <input type="number" id="inp-2"></div>
+
+                <label>third number:</label>
+                <div><input type="number" id="inp-3"></div>
+            </div>
+            <button onclick="button()">Calculate average</button>
+            <div class="card">
+            <div> <p id="display" style="background-color: burlywood;"></p> </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function button() {
+        let x = document.getElementById("inp-1").value
+        let y = document.getElementById("inp-2").value
+        let z = document.getElementById("inp-3").value
+        let value = Number(x) + Number(y) + Number(z) / 3
+        document.getElementById("display").innerHTML = "The average of " + x + "," + y +"," + z + ","  + "is :" + value
+    }
+ </script>
+</html>
