@@ -57,6 +57,12 @@
             width: 100%;
             height: 10%;
         }
+        p{
+          width: 100%;
+          height: 100%;
+          background-color: gray;
+          color: white;
+        }
     </style>
 </head>
 <body>
@@ -77,13 +83,13 @@
           </div>
           <div class="four">
             <br>
-            <button style="background-color: rgb(77, 77, 255); color: white;" onclick="button ()">Calculate</button>
+            <button style="background-color: rgb(77, 77, 255); color: white;" onclick="button()">Calculate</button>
           </div>
           <div class="five">
-            <p id="one"></p>
+            <p id="display"></p>
           </div>
           <div class="six">
-            <p id="display"></p>
+            <p id="display-1"></p>
           </div>
         </div>
     </div>
@@ -92,8 +98,15 @@
     function button () {
       let x = document.getElementById("b-one").value
       let y = document.getElementById("b-two").value
-      let z = x + Number(y)
-      z = document.getElementById("display").innerHTML
+      let z =   Number(x)+ Number(y)
+      document.getElementById("display").innerHTML  =   "sum is : "  + z 
+
+      let a = document.getElementById("b-one").value
+      let b = document.getElementById("b-two").value
+      let c =   Number(a) - Number(b)
+      document.getElementById("display-1").innerHTML = "sub is : " + c
     }
+    
+ 
 </script>
 </html>
