@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .container{
+            width: 40%;
+            height: 90%;
+            background-color: rgb(255, 255, 255);
+        }
+        .one{
+            width: 100%;
+            height: 10%;
+        }
+        .two{
+            width: 100%;
+            height: 13%;
+        }
+        .three{
+            width: 100%;
+            height: 13%;
+        }
+        input{
+            width: 98%;
+            height: 60%;
+        }
+        .four{
+            width: 100%;
+            height: 13%;
+        }
+        button{
+            width: 98%;
+            margin-top: 3%;
+            height: 50%;
+        }
+        .five{
+            width: 100%;
+            height: 10%;
+        }
+        .six{
+            width: 100%;
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+          <div class="one">
+            <h1 style="text-align: center;">Sum and difference <br>calculator</h1>
+          </div>
+
+          <div class="two">
+            <h3>First Number</h3>
+            <input type="number" id="b-one">
+          </div>
+
+          <div class="three">
+            <h3>First Number</h3>
+            <input type="number" id="b-two">
+          </div>
+          <div class="four">
+            <br>
+            <button style="background-color: rgb(77, 77, 255); color: white;" onclick="button ()">Calculate</button>
+          </div>
+          <div class="five">
+            <p id="one"></p>
+          </div>
+          <div class="six">
+            <p id="display"></p>
+          </div>
+        </div>
+    </div>
+</body>
+<script>
+    function button () {
+      let x = document.getElementById("b-one").value
+      let y = document.getElementById("b-two").value
+      let z = x + Number(y)
+      z = document.getElementById("display").innerHTML
+    }
+</script>
+</html>
