@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #26CCC2;
+            
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ECFAE5;
+            flex-direction: column;
+            background-image: url(https://s3-alpha.figma.com/hub/file/5668645379/63600b12-0675-4f96-a2f8-c456ab724660-cover.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            width: 50%;
+            height: 90%;
+          background-color:#DDF6D2;
+         
+        }
+        .one{
+            width: 100%;
+            height: 10;
+            text-align: center;
+        }
+        
+        input{
+            width: 99%;
+            height: 100%;
+        }
+        button{
+            width: 99%;
+            height: 5%;
+            margin-top: 4%;
+ 
+        }
+        p{
+            text-align: center;
+        }
+        h2{
+           
+             font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="one">
+                <h1> Budget calculator</h1>
+            </div>
+        <div class="container">
+            
+            <div class="two">
+                <h2 >profit/salary </h2>
+                <input type="number" id="one">
+            </div>
+            <div class="three">
+                <h2>rent</h2>
+                <input type="number" id="two">
+            </div>
+            <div class="four">
+                <h2>farming</h2>
+                <input type="number" id="three">
+            </div>
+            <div class="five">
+                <h2>daily need</h2>
+                <input type="number" id="four">
+            </div>
+            <div class="six">
+                <h2>food</h2>
+                <input type="number" id="five">
+            </div>
+            <div class="seven">
+                <h2>electricity/fuel </h2>
+                <input type="number" id="six">
+            </div>
+            <button onclick="krish ()">calculate</button>
+            <div class="eight">
+                <p id="display-1"></p>
+            </div>
+            <div class="nine">
+                <p id="display-2"></p>
+            </div>
+            <div class="ten">
+                <p id="display-3"></p>
+            </div>
+            <div class="eleven">
+                <p id="display-4"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function krish () {
+    let a = document.getElementById("one").value
+    let b = document.getElementById("two").value
+    let c = document.getElementById("three").value
+    let d = document.getElementById("four").value
+    let e = document.getElementById("five").value
+    let f = document.getElementById("six").value
+
+    let g = Number(a) + Number(b) + Number(c)
+    document.getElementById("display-1").innerHTML=  " Total income is : " + g 
+
+    let h = Number(d) + Number(e) + Number(f)
+    document.getElementById("display-2").innerHTML= " Total expenses : " + h
+
+    let i =  Number(g) - Number(h)
+    document.getElementById("display-3").innerHTML= " Total saving : " + i
+
+    let j =  Number(h) / Number(30)
+    document.getElementById("display-4").innerHTML= " Expenditure, per day in a month : " + j
+    }
+</script>
+</html>
