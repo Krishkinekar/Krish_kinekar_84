@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 45%;
+            height:80%;
+            border-style: solid;
+            border-radius: 30px;
+        }
+        .header{
+            width: 100%;
+            height: 10%;
+
+        }
+        .body{
+            width: 100%;
+            height: 40%;
+     
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align:start;
+        }
+        input{
+            width: 35vw;
+            height: 4vh;
+        }
+        button{
+            width: 35vw;
+            height: 6%;
+            margin-left: 10.80%;
+            color: white;
+            background-color: rgb(103, 184, 103);
+            font-size: 20px;
+        }
+        .d-1{
+            width: 35vw;
+            height: 10%;
+            margin-left: 10.80%;
+            background-color: rgb(210, 245, 255);
+            text-align: center;
+            font-size: large;
+        }
+        .d-2{
+            width: 35vw;
+            height: 10%;
+            margin-left: 10.80%;
+            background-color: #2e2e2e;
+            font-size: large;
+            color: #43ff6b;    
+            font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="header">
+                <h1 style="text-align: center;">Mark calculator</h1>
+            </div>
+            <div class="body">
+                <label style="margin-right: 68%;">Science mark </label>
+                <div><input type="text" id="i-1"></div>
+                 <label style="margin-right: 68%; "> Maths mark</label>
+                <div><input type="text" id="i-2"></div>    
+            </div>
+            <button onclick="button()"></button>
+            <div class="d-1">
+            <p id="display" ></p>
+        </div>
+        
+        </div>
+    </div>
+</body>
+<script>
+    function button() {
+        let x = document.getElementById("i-1").value
+        let y = document.getElementById("i-2").value
+        let c = x + y
+        document.getElementById("display").innerHTML = "total mark is : " + x + y;
+
+       
+    }
+</script>
+</html>
