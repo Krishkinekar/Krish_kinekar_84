@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             width: 100vw;
             height: 100vh;
             margin: 0;
             padding: 0;
         }
-        .main-container{
+
+        .main-container {
             width: 100%;
             height: 100%;
-            background-color: #9CC6DB;
+            background-color: #FEEAC9;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-        .container{
+
+        .container {
             width: 40%;
             height: 80%;
-            background-color:#ffffff;
-            box-shadow: rgb(205, 255, 251) 12px 12px 12px ;
+            background-color: #ffffff;
+            box-shadow: #FFCDC9 12px 12px 12px;
             border-radius: 22px;
         }
-        input{
+
+        input {
             width: 99.29%;
             height: 7%;
         }
-        button{
+
+        button {
             width: 99.29%;
             height: 6%;
-            background: rgb(61, 207, 61);
-            color: white;
+            background: rgb(242, 255, 139);
+            color: rgb(0, 0, 0);
             font-size: larger;
         }
-        p{
+
+        p {
             text-align: center;
-            color: springgreen;
+            color: rgb(0, 208, 255);
         }
     </style>
 </head>
+
 <body>
     <div class="main-container">
         <div class="container">
-            <h1 style="text-align: center;">Voter eligibility checker</h1>
+            <h1 style="text-align: center;">speed checker </h1>
             <br><br><br>
-            <h3>Enter your age</h3>
+            <h3>Your car speed </h3>
             <input type="number" id="one">
             <br><br><br>
             <button onclick="krish()">click me </button>
-            <p id="two" > </p>
+            <p id="two"> </p>
         </div>
     </div>
 </body>
 <script>
-    function krish () {
-        let x = document.getElementById("one").value ;
-        let y = "your age is" +x
-
-        if ( x >= 18 )  {
-            document.getElementById("two").innerHTML = "you are eligibile to vote " + '('+ y + ')'
+    function krish() {
+        let x = document.getElementById("one").value
+        let y = " ( your speed is   " + x + ')'
+        if (x >= 120) {
+            document.getElementById("two").innerHTML = "clallan is 2000 " + y
+        }
+        else {
+            document.getElementById("two").innerHTML = "no clallan " + y
         }
 
-         else   { 
-
-             document.getElementById("two").innerHTML = "you are not eligibile to vote " + '('+ y + ')'
-        }
     }
 </script>
+
 </html>
