@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(20, 220, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://t4.ftcdn.net/jpg/01/99/04/87/360_F_199048703_1q9fja2TelT0kC8DeKm9GvEWNdZKieSa.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 40%;
+            height: 85%;
+            background-color: beige transparent;
+            box-shadow: 8px 8px 8px;
+            border-style: solid;
+            border-radius: 10%;
+        }
+
+        input {
+            width: 99.10%;
+            height: 7%;
+        }
+
+        button {
+            width: 99.10%;
+            height: 7%;
+        }
+        p{
+         
+            height: 10%;
+            margin-top: 60%;
+            font-size: x-large;
+            text-align: center;
+            color: rgb(255, 50, 50)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1 style="text-align: center; color: rgb(0, 0, 0);">Discount calculator</h1>
+            <br><br><br>
+            <input type="number" id="one" placeholder="enter your price">
+            <br><br>
+
+            <button onclick="krish ()">calculate your discount</button>
+
+            <p id="two"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function krish() {
+        let x = document.getElementById("one").value
+        let y = 10000 * 10 / 100
+        let z = x - y
+        if (x >= 10000) {
+            document.getElementById("two").innerHTML = "your discount is :" +z
+        }
+
+        else {
+            document.getElementById("two").innerHTML = "sorry no discount is available :"   
+        }
+        
+    }
+</script>
+
+</html>
